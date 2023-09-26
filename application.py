@@ -27,7 +27,7 @@ answer_1 = st.selectbox(
     '***How will you react if your partner leaves you?***',
     ('That is his or her loss', 'I will be sad, devastated'))
 if answer_1 =='That is his or her loss':
-    final_answer_1 = "avoid"
+    final_answer_1 = "avoidant"
 else:
     final_answer_1 = "anxious"
 
@@ -36,7 +36,7 @@ answer_2 = st.radio(
     ["Seldom", "Quite Often"])
 
 if answer_2 =='Seldom':
-    final_answer_2 = "avoid"
+    final_answer_2 = "avoidant"
 else:
     final_answer_2 = "anxious"
 
