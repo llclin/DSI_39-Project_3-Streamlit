@@ -17,19 +17,28 @@ import pandas as pd
 
 
 st.title("Understanding your attachment style :smile:")
-st.subheader("The application is developed to help you understand you and your partner's attachment style, and provide necessary resources to help you in your relationship.")
+st.subheader("The application is developed to help you understand your attachment style, and provide necessary resources to help you in your relationship.")
 
 st.image("https://clipart-library.com/images/rcnrp8jzi.jpg", caption="Understanding your attachment style", use_column_width=True)
 
 st.divider()
 
 answer_1 = st.selectbox(
-    '***How would you like to be contacted?***',
-    ('Email', 'Home phone', 'Mobile phone'))
+    '***How will you react if your partner leaves you?***',
+    ('That is his or her loss', 'I will be sad, devastated'))
+if answer_1 =='That is his or her loss':
+    final_answer_1 = "avoid"
+else:
+    final_answer_1 = "anxious"
 
 answer_2 = st.radio(
-    "***What's your favorite movie genre?***",
-    ["Comedy", "Drama", "Documentary"])
+    "***How often do you talk to your partner about your feelings?***",
+    ["Seldom", "Quite Often"])
+
+if answer_2 =='Seldom':
+    final_answer_2 = "avoid"
+else:
+    final_answer_2 = "anxious"
 
 answer_3 = st.text_area("***Please do share with us your recent experience with your partner.***")
 
@@ -41,7 +50,7 @@ with open("our_model.pkl", 'rb') as our_model:
 if st.button('Generate my profile!'):
     with st.spinner('Wait for it...'):
         
-        record = answer_1 + " " + answer_2 + " " + answer_3
+        record = final_answer_1 + " " + final_answer_2 + " " + answer_3
         record_Series = pd.Series(record) 
         prediction = model.predict(record_Series)
         
