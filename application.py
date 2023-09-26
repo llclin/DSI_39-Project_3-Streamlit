@@ -59,7 +59,7 @@ if st.button('Generate my profile!'):
     if prediction == 1:
        st.divider() 
        st.write("Your attachment style is ***Anxious***!")
-       st.write("Anxious attachment types are often nervous and stressed about their relationships. They need constant reassurance and affection from their partner.")
+       st.write("Anxious attachment style tend to be nervous and stressed about their relationships. They need constant reassurance and affection from their partner.")
        st.divider()
        
        st.write("Below are some recommendations suitable for your attachment style :wink:")
@@ -85,7 +85,7 @@ if st.button('Generate my profile!'):
     else:
         st.divider()
         st.write("Your attachment style is ***Avoidant***!")
-        st.write("Avoidant attachment types are extremely independent, self-directed, and often uncomfortable with intimacy. They’re commitment-phobes and experts at rationalizing their way out of any intimate situation.")
+        st.write("Avoidant attachment style tend to be independent, self-directed, and often uncomfortable with intimacy. They’re commitment-phobes and experts at rationalizing their way out of any intimate situation.")
         st.divider()
         
         st.write("Below are some recommendations suitable for your attachment style :wink:")
